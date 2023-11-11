@@ -13,6 +13,8 @@
  <ul>
   <li v-for="list in booklist" :key="list" >{{ list }}</li>
  </ul>
+ <div>{{ add() }}</div>
+ <div>{{ dot(5,6) }}</div>
 </template>
 
 <script>
@@ -37,7 +39,15 @@ export default {
       num:5,
       booklist:['Book1','Book2','Book3']
     }
-  }
+  },
+   methods: {
+      add(){
+        return 2 + 2;
+      },
+      dot(a,b){
+        return a * b;
+      }
+    },
 }
 </script>
 
